@@ -1,0 +1,31 @@
+{
+  "consumer": {
+    "name": "Squarer"
+  },
+  "provider": {
+    "name": "Divider"
+  },
+  "interactions": [
+    {
+      "description": "A message",
+      "providerState": "A request for a number",
+      "request": {
+        "method": "get",
+        "path": "/api/divide",
+        "query": "left=8&right=2"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/plain; charset=utf-8"
+        },
+        "body": "{\"Total\":4}"
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

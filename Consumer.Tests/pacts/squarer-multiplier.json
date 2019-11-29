@@ -1,0 +1,31 @@
+{
+  "consumer": {
+    "name": "Squarer"
+  },
+  "provider": {
+    "name": "Multiplier"
+  },
+  "interactions": [
+    {
+      "description": "A message",
+      "providerState": "A request for a number",
+      "request": {
+        "method": "get",
+        "path": "/api/multiply",
+        "query": "left=7&right=6"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/plain; charset=utf-8"
+        },
+        "body": "{\"Total\":42}"
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

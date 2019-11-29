@@ -1,0 +1,31 @@
+{
+  "consumer": {
+    "name": "Squarer"
+  },
+  "provider": {
+    "name": "Adder"
+  },
+  "interactions": [
+    {
+      "description": "A message",
+      "providerState": "A request for a number",
+      "request": {
+        "method": "get",
+        "path": "/api/add",
+        "query": "left=4&right=6"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/plain; charset=utf-8"
+        },
+        "body": "{\"Total\":10}"
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
